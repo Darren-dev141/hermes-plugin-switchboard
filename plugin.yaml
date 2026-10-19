@@ -1,0 +1,17 @@
+name: hermes-plugin-switchboard
+version: "0.1.0"
+manifest_version: 2
+api_version: 1
+description: "Switchboard's task road as native Hermes tools: create, list, message, complete, and read tasks on the Switchboard engine over its HTTP API. Same store, same work keys, same approval and done gates as the Switchboard CLI and MCP face — this plugin is a third face on the engine, not a second store."
+author: Darren Foote
+license: MIT
+homepage: https://github.com/Darren-dev141/hermes-plugin-switchboard
+tags: [switchboard, tasks, orchestration, coordination]
+provides_tools:
+  - switchboard_tasks_create
+  - switchboard_tasks_list
+  - switchboard_tasks_message
+  - switchboard_tasks_complete
+  - switchboard_tasks_log
+config_schema:
+  url: {type: str, default: "", description: "Switchboard engine base URL. The SWITCHBOARD_URL environment variable wins over this setting; empty means http://127.0.0.1:8787."}
